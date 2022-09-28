@@ -1,6 +1,6 @@
 $(function () {
   //타이틀
-  $("h3").animate({ top: "25" + "%", opacity: "1" }, 1000, "easeOutExpo");
+  $("h3").animate({ top: "30" + "%", opacity: "1" }, 2000, "easeOutExpo");
 
   //오프라인 / 온라인
   $(".offline")

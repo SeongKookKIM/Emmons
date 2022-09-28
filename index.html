@@ -5,15 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/section.css" />
+    <link rel="stylesheet" href="css/emmons_wide.css">
+    <link rel="stylesheet" href="css/emmons_desktop.css" />
+    <link rel="stylesheet" href="css/emmons_pc.css">
+    <link rel="stylesheet" href="css/emmons_tablet.css">
+    <link rel="stylesheet" href="css/emmons_small_ta.css">
+    <link rel="stylesheet" href="css/emmons_m_pro.css">
+    <link rel="stylesheet" href="css/emmons_m.css">
     <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+    <style>
+      /* common */
+      html, body{
+        width: 100vw;
+        height: 100vh;
+      }
+      @font-face{
+        font-family:'NotoSans-Regular' ;
+
+        src:local('NotoSans-Regular'),
+        url('../fonts/NotoSans-Regular.eot'),
+        url('../fonts/NotoSans-Regular.woff') format('woff'),
+        url('../fonts/NotoSans-Regular.ttf') format('truetype');
+      }
+
+      
+
+      h3, h2, a, p ,span{
+        font-family:'NotoSans-Regular' ;
+      }
+
+
+    </style>
     <script src="lib/jquery-3.1.1.min.js"></script>
     <script src="lib/jquery.easing.1.3.js"></script>
     <script src="lib/transit.min.js"></script>
     <script src="lib/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/section.js"></script>
+    <script src="js/mobile.js"></script>
     <script>
       $(function () {
         
@@ -21,12 +50,17 @@
 
 
         var slider = $(".bxslider").bxSlider({
+          
           auto: true,
           controls: false,
           pagerCustom: "#bx-pager",
         });
+        $(".shop").click(function() {
+          $(".bxslider").show();
+          slider.reloadSlider();
+        });
 
-        $(".bxslider2").bxSlider({
+        var slider2 = $(".bxslider2").bxSlider({
           slideWidth: 265,
           slideMargin: 24,
           maxSlides: 4,
@@ -34,7 +68,12 @@
           moveSlides: 1,
           auto: true,
         });
-        $(".bxslider3").bxSlider({
+        $(".shop").click(function() {
+          $($(".bxslider2")).show();
+          slider2.reloadSlider();
+        });
+
+        var slider3 = $(".bxslider3").bxSlider({
           slideWidth: 265,
           slideMargin: 24,
           maxSlides: 4,
@@ -42,7 +81,11 @@
           moveSlides: 1,
           auto: true,
         });
-        $(".bxslider4").bxSlider({
+        $(".shop").click(function() {
+          $($(".bxslider3")).show();
+          slider3.reloadSlider();
+        });
+        var slider4 = $(".bxslider4").bxSlider({
           slideWidth: 265,
           //   slideMargin: 1,
           slideMargin: 24,
@@ -50,7 +93,11 @@
           minSlides: 4,
           auto: true,
         });
-        $(".bxslider5").bxSlider({
+        $(".shop").click(function() {
+          $($(".bxslider4")).show();
+          slider4.reloadSlider();
+        });
+        var slider5 = $(".bxslider5").bxSlider({
           slideWidth: 265,
           slideMargin: 24,
           maxSlides: 4,
@@ -58,7 +105,11 @@
           moveSlides: 1,
           auto: true,
         });
-        $(".bxslider6").bxSlider({
+        $(".shop").click(function() {
+          $($(".bxslider5")).show();
+          slider5.reloadSlider();
+        });
+        var slider6 = $(".bxslider6").bxSlider({
           slideWidth: 265,
           //   slideMargin: 1,
           slideMargin: 24,
@@ -66,13 +117,21 @@
           minSlides: 4,
           auto: true,
         });
-        $(".bxslider7").bxSlider({
+        $(".shop").click(function() {
+          $($(".bxslider6")).show();
+          slider6.reloadSlider();
+        });
+        var slider7 = $(".bxslider7").bxSlider({
           slideWidth: 265,
           //   slideMargin: 1,
           slideMargin: 24,
           maxSlides: 4,
           minSlides: 4,
           auto: true,
+        });
+        $(".shop").click(function() {
+          $($(".bxslider7")).show();
+          slider7.reloadSlider();
         });
 
         
@@ -137,6 +196,13 @@
           <span class="m_stick stick"></span>
           <span class="b_stick stick"></span>
         </div>
+        <div class="toggle_m">
+          <span class="mt_stick mo_stick"></span>
+          <span class="mm_stick mo_stick"></span>
+          <span class="mb_stick mo_stick"></span>
+        </div>
+
+        
         <div class="main_logo">
           <a href="#"><img src="img/logo.svg" alt="main_logo" /></a>
         </div>
@@ -268,6 +334,23 @@
             <a href="#" data-slide-index="5">5</a>
           </div>
         </div>
+        <div id="main_vis_m">
+          <ul class="bxslider_m">
+            <li id="vis1" class="vis_img"><img src="img/m_banner01.jpg" alt="메인배너1" /></li>
+            <li id="vis2" class="vis_img"><img src="img/m_banner02.jpg" alt="메인배너2" /></li>
+            <li id="vis3" class="vis_img"><img src="img/m_banner03.jpg" alt="메인배너3" /></li>
+            <li id="vis4" class="vis_img"><img src="img/m_banner04.jpg" alt="메인배너4" /></li>
+            <li id="vis5" class="vis_img"><img src="img/m_banner05.jpg" alt="메인배너5" /></li>
+            
+          </ul>
+          <ol>
+            <li class="btn_m on">1</li>
+            <li class="btn_m">2</li>
+            <li class="btn_m">3</li>
+            <li class="btn_m">4</li>
+            <li class="btn_m">5</li>
+          </ol>
+        </div>
       </section>
 
       <!-- @@@@@카테고리메뉴 -->
@@ -335,6 +418,270 @@
           <input type="radio" name="new" id="new6" />
           <label for="new6" class="chi">자녀방</label>
         </div>
+        
+        <div class="ct_box_m">
+          <input type="radio" name="new" id="new1_m" checked />
+          <label for="new1_m" class="bed_m">침대</label>
+          <input type="radio" name="new" id="new2_m" />
+          <label for="new2_m" class="met_m">매트리스</label>
+          <input type="radio" name="new" id="new3_m" />
+          <label for="new3_m" class="sof_m">소파</label>
+          <input type="radio" name="new" id="new4_m" />
+          <label for="new4_m" class="liv_m">거실가구</label>
+          <input type="radio" name="new" id="new5_m" />
+          <label for="new5_m" class="kit_m">주방가구</label>
+          <input type="radio" name="new" id="new6_m" />
+          <label for="new6_m" class="chi_m">자녀방</label>
+        </div>
+        
+         <!-- 제품 -->
+         <ul class="newbx_m">
+          <li class="click_m">
+            <!-- 침대 -->
+            <ul class="bxslider2_m">
+              <li>
+                <a href="#">
+                  <img src="img/new_product01.jpg" alt="침대1" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/new_product02.jpg" alt="침대2" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/new_product03.jpg" alt="침대3" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/new_product04.jpg" alt="침대4" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/new_product05.jpg" alt="침대5" />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <!-- 매트리스 -->
+            <ul class="bxslider3_m">
+              <li>
+                <a href="#">
+                  <img src="img/new_mb_01.jpg" alt="매트리스1" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/new_mb_02.jpg" alt="매트리스2" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/new_mb_03.jpg" alt="매트리스3" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/new_mb_04.jpg" alt="매트리스4" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_S0fkze4B_new_mb_05.jpg"
+                    alt="매트리스5"
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <!-- 소파 -->
+            <ul class="bxslider4_m">
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_G5y7ze0Z_new_sb_01.jpg"
+                    alt="소파1"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_eP0KrXGv_new_sb_02.jpg"
+                    alt="소파2"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_miq4cXKp_new_sb_03.jpg"
+                    alt="소파3"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_lqGQxaE6_new_sb_04.jpg"
+                    alt="소파4"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_PqZnYjku_new_sb_05.jpg"
+                    alt="소파5"
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <!-- 거실가구 -->
+            <ul class="bxslider5_m">
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_uHFbgAsW_new_lb_01.jpg"
+                    alt="거실가구1"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_vMrWn9Qx_new_lb_02.jpg"
+                    alt="거실가구2"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_YhFNT2cl_new_lb_03.jpg"
+                    alt="거실가구3"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_on7k1CTv_new_lb_04.jpg"
+                    alt="거실가구4"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_j1Mdw39X_new_lb_05.jpg"
+                    alt="거실가구5"
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <!-- 주방가구 -->
+            <ul class="bxslider6_m">
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_k9YJ1lsP_new_tb_01.jpg"
+                    alt="주방가구1"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_osRX0ELU_new_tb_02.jpg"
+                    alt="주방가구2"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_lmRKqD09_new_tb_03.jpg"
+                    alt="주방가구3"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_YuCe4tjV_new_tb_04.jpg"
+                    alt="주방가구4"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_PsXSwYDL_new_tb_05.jpg"
+                    alt="주방가구5"
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <!-- 자녀방 -->
+            <ul class="bxslider7_m">
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_DLPT2yOk_new_cb_01.jpg"
+                    alt="자녀방1"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_5fICYPvt_new_cb_02.jpg"
+                    alt="자녀방2"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_rMouKWLd_new_bb_03.jpg"
+                    alt="자녀방3"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_OTW4es18_new_bb_03.jpg"
+                    alt="자녀방4"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="img/2000802565_P8TKo3rj_new_cb_04.jpg"
+                    alt="자녀방5"
+                  />
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+
 
         <!-- 제품 -->
         <ul class="newbx">
@@ -587,6 +934,39 @@
       <!-- @@@@@뉴스 -->
       <section id="news">
         <h2>놓칠 수 없는 요즘 소식</h2>
+        <!-- 모바일 -->
+        
+          <div class="news_subbox_m">
+            <div class="news_sub_box1_m">
+              <img src="img/sub_banner01.jpg" alt="newsbanner01" />
+              <div class="txt_box1_m">
+                <p>KBS 주말 드라마 현재는 아름다워 가구 협찬</p>
+                <p>에몬스가 제품(가구)협찬 합니다.</p>
+              </div>
+            </div>
+
+            <div class="news_sub_box2_m">
+              <img src="img/sub_banner02.jpg" alt="newsbanner02" />
+              <div class="txt_box2_m">
+                <p>신화 앤디의 취향을 담은 신혼집 첫 공개!</p>
+                <p>신혼 부부 앤디 ♡ 이은주 에몬스와 만나다</p>
+              </div>
+            </div>
+
+            <div class="news_sub_box3_m">
+              <img src="img/sub_banner03.jpg" alt="newsbanner03" />
+              <div class="txt_box3_m">
+                <p>집 꾸미기 좋은 계절, AUTUMN SALE</p>
+                <p>최대 ~40% 할인</p>
+              </div>
+              <div class="none_box_m">
+                <p>집 꾸미기 좋은 계절, AUTUMN SALE</p>
+                <p>최대 ~40% 할인</p>
+              </div>
+            </div>
+          </div>
+        
+        <!-- 일반 -->
         <div class="news_box">
           <div class="news_subbox">
             <div class="news_sub_box1">
@@ -600,16 +980,20 @@
             <div class="news_sub_box2">
               <img src="img/sub_banner02.jpg" alt="newsbanner02" />
               <div class="txt_box2">
-                <p>KBS 주말 드라마 현재는 아름다워 가구 협찬</p>
-                <p>에몬스가 제품(가구)협찬 합니다.</p>
+                <p>신화 앤디의 취향을 담은 신혼집 첫 공개!</p>
+                <p>신혼 부부 앤디 ♡ 이은주 에몬스와 만나다</p>
               </div>
             </div>
 
             <div class="news_sub_box3">
               <img src="img/sub_banner03.jpg" alt="newsbanner03" />
               <div class="txt_box3">
-                <p>KBS 주말 드라마 현재는 아름다워 가구 협찬</p>
-                <p>에몬스가 제품(가구)협찬 합니다.</p>
+                <p>집 꾸미기 좋은 계절, AUTUMN SALE</p>
+                <p>최대 ~40% 할인</p>
+              </div>
+              <div class="none_box">
+                <p>집 꾸미기 좋은 계절, AUTUMN SALE</p>
+                <p>최대 ~40% 할인</p>
               </div>
             </div>
           </div>
