@@ -1,4 +1,4 @@
-@media all and (min-width: 370px) and (max-width: 700px) {
+@media all and (min-width: 390px) and (max-width: 700px) {
   * {
     margin: 0;
     padding: 0;
@@ -127,7 +127,7 @@
   }
   .sc_1 {
     top: 2px;
-    right: -48%;
+    right: -60%;
     border-radius: 50%;
     border: 2px solid #e16900;
   }
@@ -158,7 +158,7 @@
     border-radius: 50%;
     position: absolute;
     /* right: -13%; */
-    right: -41%;
+    right: -51%;
     top: 31px;
     margin-top: -5px;
 
@@ -186,8 +186,8 @@
   }
 
   .shop {
-    width: 35%;
-    height: 80px;
+    width: 40%;
+    height: 65px;
 
     /* border: 1px solid red; */
     border-radius: 30px;
@@ -211,7 +211,7 @@
   .shop a {
     line-height: 1.3;
     color: #fff;
-    font-size: 55px;
+    font-size: 45px;
     font-weight: bold;
     text-shadow: 3px 3px 10px black;
     transition: all 0.5s ease;
@@ -226,21 +226,21 @@
     top: 100px;
   }
   .family {
-    width: 30%;
+    width: 35%;
     height: 40px;
     line-height: 40px;
     /* border: 1px solid red; */
     border-radius: 10px;
     position: absolute;
 
-    bottom: 5%;
+    bottom: 4%;
     right: 5%;
     background: #d1d1d1;
     z-index: 10;
     transition: all 1s ease;
   }
   .family h2 {
-    font-size: 19px;
+    font-size: 16px;
     color: #fff;
 
     text-align: left;
@@ -250,7 +250,7 @@
     display: inline-block;
     width: 10%;
     line-height: 40px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
 
     position: absolute;
@@ -262,7 +262,7 @@
     /* border: 1px solid red; */
   }
   .fam_ch {
-    width: 30%;
+    width: 35%;
     height: 100px;
     /* border: 1px solid red; */
     position: absolute;
@@ -369,11 +369,11 @@
   /* 검색창 */
   .search {
     position: absolute;
-    top: 150px;
+    top: 120px;
     left: 0%;
     right: 0;
     margin: auto;
-    width: 40%;
+    width: 60%;
     height: 40px;
     /* border: 1px solid red; */
   }
@@ -384,7 +384,7 @@
     background-color: #fff;
     border-radius: 8px;
     padding: 10px 12px;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     box-sizing: border-box;
   }
@@ -402,8 +402,9 @@
   .menu_box {
     width: 100vw;
     /* height: 300px; */
+
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 0;
     right: 0;
     margin: auto;
@@ -645,7 +646,7 @@
   }
 
   #main_vis_m > ol {
-    width: 30%;
+    width: 40%;
     height: 15px;
     position: absolute;
 
@@ -693,7 +694,7 @@
     margin: auto;
   }
   #sc_category #category ul {
-    width: 79%;
+    width: 95%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -811,7 +812,7 @@
     text-align: center;
 
     position: absolute;
-    left: 70px;
+    left: 15px;
 
     opacity: 0;
   }
@@ -868,6 +869,7 @@
     text-align: center;
     border-bottom: 1px dashed black;
     padding-bottom: 15px;
+    font-weight: bold;
   }
   #news .news_subbox_m .news_sub_box2_m {
     width: 100%;
@@ -886,6 +888,7 @@
     text-align: center;
     border-bottom: 1px dashed black;
     padding-bottom: 15px;
+    font-weight: bold;
   }
   #news .news_subbox_m .news_sub_box3_m {
     width: 100%;
@@ -902,6 +905,7 @@
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    font-weight: bold;
   }
   #news .news_subbox_m .news_sub_box3_m .none_box_m {
     display: none;
